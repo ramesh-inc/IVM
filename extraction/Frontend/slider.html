@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: 'Inter UI', sans-serif;
+        text-align: center;
+        background: #eee;
+        color: #444;
+        margin: 50px;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      .range-style {
+        position: relative;
+        z-index: 1000;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: transparent;
+        height: 6px;
+        border-radius: 3px;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
+      }
+      .thumb-style {
+        position: relative;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #4d91ea;
+        border: 1px solid #165dbb;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 5000;
+        transition: background 0.3s ease-in-out;
+      }
+      .thumb-style_hover {
+        background: #165dbb;
+        transition: background 0.3s ease-in-out;
+      }
+      .slider-container {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin: 15px 0;
+      }
+      input[type='range'] {
+        position: relative;
+        z-index: 1000;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: transparent;
+        height: 6px;
+        border-radius: 3px;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
+      }
+      input[type='range']::-webkit-slider-thumb {
+        position: relative;
+        -webkit-appearance: none;
+                appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #4d91ea;
+        border: 1px solid #165dbb;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 5000;
+        transition: background 0.3s ease-in-out;
+      }
+      input[type='range']::-webkit-slider-thumb:hover,
+      input[type='range']::-webkit-slider-thumb:active {
+        background: #165dbb;
+        transition: background 0.3s ease-in-out;
+      }
+      input[type='range']::-moz-range-track {
+        background: transparent;
+      }
+      input[type='range']::-moz-range-thumb {
+        position: relative;
+        -moz-appearance: none;
+             appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #4d91ea;
+        border: 1px solid #165dbb;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 5000;
+        transition: background 0.3s ease-in-out;
+      }
+      input[type='range']::-moz-range-thumb:hover,
+      input[type='range']::-moz-range-thumb:active {
+        background: #165dbb;
+        transition: background 0.3s ease-in-out;
+      }
+      .fill {
+        position: absolute;
+        z-index: 50;
+        top: 50%;
+        height: 6px;
+        width: 0%;
+        border-radius: 6px;
+        background: linear-gradient(to right, #d6e6fa 0%, #165dbb 100%);
+      }
+      .count {
+        position: absolute;
+        top: -18px;
+        left: 0;
+        border: 1px solid #165dbb;
+        background: #4d91ea;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 20px;
+        text-align: center;
+        width: 18px;
+        margin-left: 0px;
+        font-size: 11px;
+      }
+  </style>
+  </head>
+  <body>
+    <h1>Slider</h1>
+    <div class="slider-container">
+      <input id="slider" type="range" min="0" max="10" value="0"/>
+      <div class="count">0</div>
+      <div class="fill"></div>
+    </div>
+
+    <script>
+      var slider = document.getElementById("slider");
+
+      slider.oninput = function() {
+      	$('.count').text(this.value).css({
+      		'left': this.value + '%',
+      		'transform': 'translateX(-' + this.value + '%)'
+      	});
+      	$('.fill').css('width', this.value + '0%');
+      }
+    </script>
+  </body>
+</html>

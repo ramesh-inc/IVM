@@ -1,0 +1,277 @@
+@RELATION JOB
+@ATTRIBUTE age {18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35}
+@ATTRIBUTE skills {internet of things, java, c, c++, python, php, android, ios, hr management, marketing, hybernate, javaee, servlet, react, angular, mern, mean, nodejs, expressjs, iot, machine learning, ml, virtual reality, vr, artificial intelligence, ai, blockchain, augmented reality, ar, cloud computing, intelligent apps, i–apps, big data, robotic process automation, rpa, .net, ruby, wordpress, c#, cpp, sql, js, html, css, react native, javascript, oop, aop, jsp, rest, ajax, jee, ejb, jms, xml, hibernate, spring, ionic, node, swift, oracle, r, test case writing, graphics, use cases, uml diagrams, test cases, selenium, microservices, saas, paas, clean and tested commits to git, docker, kubernates, istio, aws, apache kafka, elastic, bdd, test automation, spring, hibernate/j pa, node js, oracle, webapi, .net 4.6/4.7, .net core, linq, entity framework, sql server, java design patterns, architecture patterns, jsp/servelets, spring, spring boot, hibernate, soa, designing systems, database and deployment architecture, mysql, linux and windows operating systems, experience in code reviewing, team grooming, cake php, laravel, ruby on rails, restful, experience on cross browser compatibility, w3c standards, database concepts, relational databases, experience on unix/linux, bootstrap, react js, rest api, unit testing framework, spring framework, mssql, nosql, unit testing, engineering best practices, build, package and deployment tools, experience in one or more web and application servers, oracle 11g, pl sql, jquery, javascript, html5, knowledge in quality assurance and testing, test management(manual), automation and performance tools, selenium, knowledge on agile/scrum, knowledge in automation and performance, knowledge in software development, spring boot/cloud, database clustering, multi-tenant application design, load balancing, designing time critical application and high transactional application, jenkins, elasticsearch, artificial intelligence, activity engine, activity engine , mvc, mvvm, riot, typescript, webpack, restful api, sass, less, ability to work within deadlines, problem solving and communication skills, ability to learn new technologies quickly, ability to understand the importance of customer service, innovative and forward thinking, functional, ui, web services, performance testing, problem solving skills, jmeter, jira, scrum process, knowledge in test management tools, seo, java/j2ee, apex, soap, j2ee/jee, reactjs, angularjs, selinium, knowledge on software quality assurance and testing, java script, linux}
+@ATTRIBUTE experience_yrs {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+@ATTRIBUTE university {sliit, saitm, cinec, nibm, nsbm, apiit, anc, kdu, university of colombo, university of peradeniya, university of moratuwa, university of kelaniya, university of ruhuna, university of sri jayewardenepura, university of jaffna, university of the visual & performing arts, open university of sri lanka, wayamba university of sri lanka, sabaragamuwa university of sri lanka, eastern university of sri lanka, rajarata university of sri lanka, south eastern university of sri lanka, uva wellassa university, american college of higher education, auston institute, australian college of business and technology, business management school, bms, british college of applied studies, bcas, ebusiness academy, eba, esoft metro campus, esoft, excellence college of management, imperial institute of higher education, industrial master, informatics institute of technology, iit, institute of technological studies, international college of business and technology, icbt, northshore college of business & technology, pioneer institute of business and technology, royal institute of colombo, south asian institute of technology and medicine, sri lanka institute of information technology, technoplus automation, edulink international campus, kasp learning campus, klc}
+@ATTRIBUTE degree {it, se, cyber, bm, en, bsc(hons) in information technology, bsc (hons) in it, bsc in computer science, bachelor's degree or higher qualification in computer science/engineering, degree or similar educational qualification in it or computer science, degree related to information technology/computer science or software engineering, bachelor's degree in computer science/mis or equivalent experience, bachelor's degree in computing or information technology, bsc in computer science or related discipline or it, bsc in computer science or related discipline or equivalent professional qualification, b.sc. in computer science related discipline or equivalent professinal qualification, bsc(hons) in it, bsc in it, bsc.in it, bsc in computer science}
+@ATTRIBUTE specialization {software eng, cyber security, it, account, marketing, software engineering, information technology, bsc in computer science, data science, computer science}
+@ATTRIBUTE job {associate software eng, software eng, senior software eng, assistant account, accountant, devops eng, quality assurance eng, intern, cloud architect, cloud consultant, cloud product and project manager, cloud services developer, cloud software and network engineer, cloud system administrator, cloud system engineer, computer and information research scientist, computer and information systems manager, computer network architect, computer systems analyst, computer systems manager, it analyst, it coordinator, network administrator, network architect, network and computer systems administrator, network engineer, network systems administrator, senior network architect, senior network engineer, senior network system administrator, telecommunications specialist, customer support administrator, customer support specialist, desktop support manager, desktop support specialist, help desk specialist, help desk technician, it support manager, it support specialist, it systems administrator, senior support specialist, senior system administrator, support specialist, systems administrator, technical specialist, technical support engineer, technical support specialist, data center support specialist, data quality manager, database administrator, senior database administrator, application support analyst, senior system analyst, systems analyst, systems designer, chief information officer, chief technology officer, director of technology, it director, it manager, management information systems director, technical operations officer, information security, security specialist, senior security specialist, application developer, applications engineer, associate developer, computer programmer, developer, java developer, junior software engineer, .net developer, programmer analyst, senior applications engineer, senior programmer, senior programmer analyst, senior software engineer, senior system architect, senior system designer, senior systems software engineer, software architect, software developer, software engineer, software quality assurance analyst, system architect, systems software engineer, front end developer, senior web administrator, senior web developer, web administrator, web developer, webmaster, associate software engineer, software engineering, trainee software engineer, associate quality assurance engineer, associate qa engineer, trainee qa, intern qa, ba, senior software engineer, senior software quality assurance engineer, associate software quality engineer, associate software quality assurance engineer, bsc in computer science, information technology or equivalent professional qualification, senior qa engineer, trainee business analyst, data engineer, social media consultant, qa engineer, business analyst, associate qa lead, qa lead, software quality assurance engineer}
+@DATA
+30,java,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,oop,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,aop,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,jsp,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,rest,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,ajax,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,javascript,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,css,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,html,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,jee,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,ejb,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,jms,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,xml,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,hibernate,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,spring,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+30,sql,5,university of moratuwa,bsc(hons) in information technology,software eng,senior software engineer
+24,react native,1,sliit,bsc(hons) in information technology,software engineering,trainee software engineer
+24,android,1,sliit,bsc(hons) in information technology,software engineering,trainee software engineer
+24,javascript,1,sliit,bsc(hons) in information technology,software engineering,trainee software engineer
+24,angular,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+24,.net,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+20,android,0,sliit,it,it,intern
+20,ios,0,sliit,it,it,intern
+20,java,0,sliit,it,it,intern
+20,c,0,sliit,it,it,intern
+23,java,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,php,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,mern,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,wordpress,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,c#,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,python,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,cpp,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,c,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,sql,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,js,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,html,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+23,css,1,sri lanka institute of information technology,bsc(hons) in information technology,software eng,associate software engineer
+20,java,1,nsbm,se,software eng,associate software eng
+20,c,1,nsbm,se,software eng,associate software eng
+20,android,1,nsbm,se,software eng,associate software eng
+25,php,4,cinec,cyber,cyber security,software eng
+25,android,4,cinec,cyber,cyber security,software eng
+25,ios,4,cinec,cyber,cyber security,software eng
+22,react,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,react native,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,angular,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,ionic,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,c,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,c++,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,c#,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,java,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,python,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,node,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+22,swift,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+23,java,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+24,java,1,sliit,bsc(hons) in information technology,information technology,trainee business analyst
+24,c,1,sliit,bsc(hons) in information technology,information technology,trainee business analyst
+24,c++,1,sliit,bsc(hons) in information technology,information technology,trainee business analyst
+25,python,1,sliit,bsc(hons) in information technology,data science,data engineer
+25,java,1,sliit,bsc(hons) in information technology,data science,data engineer
+25,oracle,1,sliit,bsc(hons) in information technology,data science,data engineer
+25,r,1,sliit,bsc(hons) in information technology,data science,data engineer
+23,java,1,sliit,bsc(hons) in information technology,information technology,associate quality assurance engineer
+23,test case writing,1,sliit,bsc(hons) in information technology,information technology,associate quality assurance engineer
+22,test case writing,1,sliit,bsc(hons) in it,information technology,trainee qa
+21,test case writing,0,sliit,bsc(hons) in it,it,intern qa
+23,angular,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+23,.net,1,sliit,bsc(hons) in information technology,software engineering,associate software engineer
+24,java,1,sliit,bsc in it,information technology,ba
+31,seo,7,sliit,bsc.in it,information technology,social media consultant
+31,angular,7,sliit,bsc.in it,information technology,social media consultant
+31,php,7,sliit,bsc.in it,information technology,social media consultant
+31,wordpress,7,sliit,bsc.in it,information technology,social media consultant
+31,graphics,7,sliit,bsc.in it,information technology,social media consultant
+24,react,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,angular,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,java,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,c++,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,php,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,html,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,css,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+24,c#,1,sri lanka institute of information technology,bsc(hons) in information technology,software engineering,associate software engineer
+23,c#,1,esoft,bsc(hons) in information technology,software engineering,associate software engineer
+23,java,1,esoft,bsc(hons) in information technology,software engineering,associate software engineer
+23,angular,1,esoft,bsc(hons) in information technology,software engineering,associate software engineer
+26,java,2,iit,bsc(hons) in information technology,information technology,software engineer
+26,c#,2,iit,bsc(hons) in information technology,information technology,software engineer
+26,angular,2,iit,bsc(hons) in information technology,information technology,software engineer
+26,php,2,iit,bsc(hons) in information technology,information technology,software engineer
+27,java,2,iit,bsc(hons) in information technology,information technology,qa engineer
+26,use cases,2,iit,bsc(hons) in information technology,information technology,business analyst
+26,uml diagrams,2,iit,bsc(hons) in information technology,information technology,business analyst
+32,test cases,7,sliit,bsc(hons) in it,it,associate qa lead
+32,java,7,sliit,bsc(hons) in it,it,associate qa lead
+32,selenium,7,sliit,bsc(hons) in it,it,associate qa lead
+33,test cases,8,nibm,bsc(hons) in it,it,qa lead
+25,java,2,iit,bsc (hons) in it,it,business analyst
+30,c#,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,microservices,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,saas,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,paas,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,clean and tested commits to git,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,java,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,c++,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,c,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,android,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,react,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,php,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+29,java,4,university of colombo,bsc in computer science,computer science,senior software quality assurance engineer
+29,c++,4,university of colombo,bsc in computer science,computer science,senior software quality assurance engineer
+29,selenium,4,university of colombo,bsc in computer science,computer science,senior software quality assurance engineer
+29,html,4,university of colombo,bsc in computer science,computer science,senior software quality assurance engineer
+29,css,4,university of colombo,bsc in computer science,computer science,senior software quality assurance engineer
+29,test cases,4,university of colombo,bsc in computer science,computer science,senior software quality assurance engineer
+31,docker,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,kubernates,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,istio,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,aws,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,apache kafka,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,elastic,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,react,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,bdd,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,test automation,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,java/j2ee,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,spring,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,hibernate/j pa,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,ejb,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,jms,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,node js,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+31,oracle,5,university of kelaniya,bsc(hons) in information technology,software engineering,senior software engineer
+27,c#,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,ajax,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,webapi,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,.net 4.6/4.7,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,.net core,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,linq,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,entity framework,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+27,sql server,2,university of colombo,bsc(hons) in information technology,software engineering,software engineer
+29,java,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+29,.net,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+29,sql,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+29,c++,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+29,c,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+29,oop,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+29,apex,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+33,java design patterns,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,architecture patterns,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,jsp/servelets,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,spring,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,spring boot,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,hibernate,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,soa,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,designing systems,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,database and deployment architecture,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,react,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,react native,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,angular,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,oracle,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,mysql,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,linux and windows operating systems,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,experience in code reviewing,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+33,team grooming,5,university of moratuwa,bsc(hons) in information technology,software engineering,senior software engineer
+30,java,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,c++,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,sql,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,cake php,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,laravel,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,ruby on rails,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,restful,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,soap,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,experience on cross browser compatibility,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,w3c standards,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,database concepts,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,relational databases,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,experience on unix/linux,5,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+30,java,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+30,laravel,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+30,aws,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+30,bootstrap,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+30,react js,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+30,rest api,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+30,unit testing framework,4,sliit,bsc(hons) in information technology,information technology,senior software engineer
+32,java,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,c++,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,j2ee/jee,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,spring framework,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,oracle,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,mssql,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,nosql,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,unit testing,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,engineering best practices,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,build,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+32,package and deployment tools,5,university of colombo,bsc(hons) in information technology,software engineering,senior software engineer
+28,java,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,nodejs,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,reactjs,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,angularjs,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,jquery,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,javascript,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,html5,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,css,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,oracle 11g,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+28,pl sql,4,university of colombo,bsc(hons) in information technology,information technology,senior software engineer
+30,java,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+30,oop,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+30,c++,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+30,selinium,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+30,test cases,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+30,html,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+30,css,3,sliit,bsc(hons) in information technology,information technology,senior software quality assurance engineer
+25,java,1,university of colombo,bsc(hons) in information technology,information technology,associate software quality engineer
+25,knowledge in quality assurance and testing,1,university of colombo,bsc(hons) in information technology,information technology,associate software quality engineer
+25,test management(manual),1,university of colombo,bsc(hons) in information technology,information technology,associate software quality engineer
+25,automation and performance tools,1,university of colombo,bsc(hons) in information technology,information technology,associate software quality engineer
+25,selenium,1,university of colombo,bsc(hons) in information technology,information technology,associate software quality engineer
+25,knowledge on agile/scrum,1,university of colombo,bsc(hons) in information technology,information technology,associate software quality engineer
+26,java,1,sliit,bsc(hons) in information technology,information technology,software quality assurance engineer
+26,knowledge on software quality assurance and testing,1,sliit,bsc(hons) in information technology,information technology,software quality assurance engineer
+26,knowledge in automation and performance,1,sliit,bsc(hons) in information technology,information technology,software quality assurance engineer
+26,knowledge in software development,1,sliit,bsc(hons) in information technology,information technology,software quality assurance engineer
+30,jee,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,html,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,css,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,soap,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,rest,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,spring,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,spring boot/cloud,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,hibernate,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,java script,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,angularjs,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,react,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,linux,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,database clustering,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,multi-tenant application design,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,load balancing,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,designing time critical application and high transactional application,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,jenkins,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,elasticsearch,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,artificial intelligence,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+30,activity engine ,3,university of moratuwa,bsc (hons) in it,information technology,senior software engineer
+29,javascript,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,html,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,css,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,oop,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,mvc,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,mvvm,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,jquery,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,angular,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,react,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,riot,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,typescript,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,webpack,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,restful api,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,sass,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+29,less,4,sliit,bsc(hons) in information technology,software engineering,senior software engineer
+31,java,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,functional,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,ui,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,web services,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,performance testing,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,test cases,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,selenium,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,oop,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,problem solving skills,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,jmeter,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,jira,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,scrum process,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
+31,knowledge in test management tools,4,university of moratuwa,bsc (hons) in it,information technology,senior qa engineer
