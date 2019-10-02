@@ -12,9 +12,9 @@ class user:
 
     def insertUser(self, age, name, address, nic, email, phone):
 
-        sql = "insert into user(age, name, address, nic, email, phone) values(%s, %s, %s, %s, %s, %s)"
+        sql = "insert into user(age, name, address, nic, email, phone, experience) values(%s, %s, %s, %s, %s, %s, %s)"
         try:
-            self.cursor.execute(sql, (age, name, address, nic, email, phone))
+            self.cursor.execute(sql, (age, name, address, nic, email, phone, 'xxx'))
             self.db.commit()
             return self.cursor.lastrowid
         except Exception as e:

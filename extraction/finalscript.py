@@ -488,14 +488,14 @@ def clogin():
         # if account:
         for value in account:
             pid = str(value[0])
-            print(" id in company login: " + pid)
+            print("id: " + pid)
 
         # if account:
             # Create session data, we can access this data in other routes
 
             # pid = (account[0])
             # Redirect to home page
-            return redirect(url_for('profileload1', id = pid))
+            return redirect(url_for('profileload1', id2 = pid))
 #CV login
         else:
             mycursor.execute("SELECT * from cv_reg where email=%s AND password=%s;", [username11, password11])
@@ -554,12 +554,13 @@ def clogin():
 
 
 #get company profile page after login
-@app.route('/company/<id>', methods=['GET', 'POST'])
-def profileload1(id):
-    id1=request.args.get('id')
-    print('Profile Load Id: ' + str(id))
+ar=[]
+@app.route('/company/<id2>', methods=['GET', 'POST'])
+def profileload1(id2):
+    ar.append(id2)
+    id1=request.args.get('id2')
+    print('Profile Load Id: ' + str(id2))
     mycursor.execute("SELECT * from vacancies where company_id='%s'" ,id1)
-    idx=str(id)
     values1 = mycursor.fetchall()
     for i in values1:
         print(i[0])
@@ -587,7 +588,7 @@ def profileload1(id):
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             # return redirect('exx',file_name=filename)
             # send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-            return redirect(url_for('extracteddetails', id=idx, filename=filename ))
+            return redirect(url_for('extracteddetails', id=id, filename=filename))
 
 
 
@@ -597,8 +598,7 @@ def profileload1(id):
 #extract vacancy details
 @app.route('/excompany/<filename>', methods=['GET', 'POST'])
 def extracteddetails(filename):
-    id = request.args.get('id')
-    print(id)
+    id = ar[0]
     mycursor.execute("SELECT * from vacancies where company_id='%s'" % id)
     values1 = mycursor.fetchall()
     vid = datetime.datetime.now().strftime("%I:%M%p%B%d%Y").replace(":/ ", "")+filename

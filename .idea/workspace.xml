@@ -26,32 +26,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pload_vaca</find>
-      <find>matching_vacancyList</find>
-      <find>../Frontend/</find>
-      <find>extractedd</find>
-      <find>vvid</find>
-      <find>/clog</find>
-      <find>/upload</find>
-      <find>linkedinextract</find>
-      <find>vacancyextract</find>
-      <find>extracteddetails</find>
-      <find>extracted</find>
-      <find>linkedinext</find>
-      <find>clogin</find>
-      <find>profileload1</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="77" />
-    <option name="y" value="-8" />
-    <option name="width" value="1377" />
-    <option name="height" value="739" />
   </component>
   <component name="ProjectId" id="1RVCj1xQva46BAgs0LcZCU3GwCc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,7 +37,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -111,9 +87,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\User\Miniconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/extraction" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -194,8 +170,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.finalscript" />
         <item itemvalue="Python.vacancyMatching" />
+        <item itemvalue="Python.finalscript" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.nbTrainClassifier" />
       </list>

@@ -66,6 +66,15 @@ app.secret_key = 'super secret key'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+# get file extention and check whether the file is allowed
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def allowed_file1(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS1
 
 #Route to Home Page
 @app.route('/', methods=['GET', 'POST'])
@@ -143,6 +152,8 @@ def upload_resume():
 
         Predictor.Prediction().makePredictionNb()
         vacancy_matching = vm.sq_vacancy_matching().selectByResumeID(userid)
+
+        print("Vacancy_matching" + str(vacancy_matching))
 
         # Build Suggestion Result
         matching_vacancyList = list()
@@ -229,22 +240,46 @@ def upload_vacancy():
     return render_template('suggetion_resume.html', candidates=anonimityList)
 
 
+#Get Resumes for Vacancy
+@app.route("/build_resume_list", methods=['GET', 'POST'])
+def build_resume_list():
+    if request.method == 'POST':
+        vacancyId = request.form['vacancy_id']
+        # vMatcher.VacancyMatching().matchingByVacencyId(vacancyId)
+
+        print(vacancyId)
+        matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(vacancyId)
+
+
+        # Build Suggestion Result
+        candidates = list()
+        # anonimityList = list()
+
+        for row in matchingDetails:
+            user = userClass.user().selectUser(row[1])
+            print(row[1])
+            # anonimityValues = anonimity.anonimity().selectByUserID(row[1])
+            candidates.append(user)
+            # print(anonimityValues)
+            # anonimityList.append(anonimityValues)
+
+        print(candidates)
+        # print(anonimityList)
+
+    else:
+        return render_template('suggetion_resume.html')
+    return render_template('suggetion_resume.html', candidates=candidates)
+
+
+
+
+
 # Madhushani
-#get signup/Sign In page after clicking sign in button in home page
+
+# get signup/Sign In page after clicking sign in button in home page
 @app.route('/signup', methods=['GET', 'POST'])
 def loadpage():
     return render_template('joinivm.html')
-
-
-# get file extention and check whether the file is allowed
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
-def allowed_file1(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS1
 
 
 # get data extraction page after uploading job seekers' cv to the system in signup page
@@ -255,7 +290,7 @@ def upload_file():
         # check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part', 'warning')
-            #return redirect(url_for('index'))
+            # return redirect(url_for('index'))
         file = request.files['file']
         # if user does not select file, browser also
         # submit an empty part without filename
@@ -309,12 +344,18 @@ def extracted(filename):
             skills = []
             name = []
             for line_index, line in enumerate(txt):
+                # print('Line #' + str(line_index) + ': ', line)
+                # if extract_name(line) is not None:
+                #     name1.append(line)
 
                 if extract_address(line) is not None:
                     address.append(line)
 
                 if extract_nic(line) is not None:
                     nic.append(line)
+
+                # if extract_linkedin(line) is not None:
+                #     linkedin.append(line)
 
                 if extract_email(line) is not None:
                     email.append(line)
@@ -353,17 +394,17 @@ def extracted(filename):
             experience_yrs = [" "]
             objectives = [" "]
 
-            nam = json.dumps(name1,ensure_ascii=False)
-            add = json.dumps(address,ensure_ascii=False)
-            lin = json.dumps(linkedin,ensure_ascii=False)
-            nic1 = json.dumps(nic,ensure_ascii=False)
-            ski = json.dumps(skills,ensure_ascii=False)
-            exp = json.dumps(experience,ensure_ascii=False)
-            pro = json.dumps(projects,ensure_ascii=False)
-            expyrs = json.dumps(experience_yrs,ensure_ascii=False)
-            uni = json.dumps(university,ensure_ascii=False)
-            deg = json.dumps(degrees,ensure_ascii=False)
-            obj = json.dumps(objectives,ensure_ascii=False)
+            nam = json.dumps(name1, ensure_ascii=False)
+            add = json.dumps(address, ensure_ascii=False)
+            lin = json.dumps(linkedin, ensure_ascii=False)
+            nic1 = json.dumps(nic, ensure_ascii=False)
+            ski = json.dumps(skills, ensure_ascii=False)
+            exp = json.dumps(experience, ensure_ascii=False)
+            pro = json.dumps(projects, ensure_ascii=False)
+            expyrs = json.dumps(experience_yrs, ensure_ascii=False)
+            uni = json.dumps(university, ensure_ascii=False)
+            deg = json.dumps(degrees, ensure_ascii=False)
+            obj = json.dumps(objectives, ensure_ascii=False)
             print(ski)
 
         # extract data from pdf
@@ -450,7 +491,6 @@ def extracted(filename):
         # get edited data from the form and save to db
 
         if request.method == 'POST':
-
             namer = re.sub(r"[\n\t\s]*", "", (request.form['full_name']))
             mobiler = (request.form['phone_number'])
             addressr = (request.form['address'])
@@ -459,18 +499,18 @@ def extracted(filename):
             unir = (request.form['university'])
             degr = (request.form['degree'])
             schr = (request.form['school'])
-            skir = json.dumps(request.form['skills'],ensure_ascii=False)
+            skir = json.dumps(request.form['skills'], ensure_ascii=False)
             expr = (request.form['experience'])
             pror = (request.form['projects'])
             spr = (request.form['specialization'])
             url1 = (request.form['linkedin_link'])
             # url1 = json.dumps(request.form['linkedin_link'], ensure_ascii=False)
 
-            sname=int(request.form['sname'])
-            sphone=int(request.form['sphone'])
-            saddress=int(request.form['saddress'])
-            semail=int(request.form['semail'])
-            snic=int(request.form['snic'])
+            sname = int(request.form['sname'])
+            sphone = int(request.form['sphone'])
+            saddress = int(request.form['saddress'])
+            semail = int(request.form['semail'])
+            snic = int(request.form['snic'])
 
             namenum = round((len(namer) / 10)) * sname
             print(namenum)
@@ -481,13 +521,15 @@ def extracted(filename):
 
             # AC = input("What is your Preferred Privacy Level: 1- Fully Anonymized   2- Partially Anonymized    3- Totally Visible :")
 
-            aname1 = namer[:(len(namer)) - namenum],("xxxx")
+            aname1 = namer[:(len(namer)) - namenum], ("xxxx")
             aemail1 = emailr[:len(emailr) - emailnum]
             aaddress1 = addressr[:len(addressr) - addressnum]
             aphone1 = mobiler[:len(mobiler) - phonenum]
             anic1 = nicr[:len(nicr) - nicnum]
-            job= "Software Engineer"
-            age= 25
+            job = "Software Engineer"
+            age = 25
+            nbstatus = 0
+            dtstats = 0
 
             sql_user = "insert into user(age, name, address,nic, email, phone,  experience) values(%s, %s, %s, %s, %s, %s,%s)"
 
@@ -502,33 +544,226 @@ def extracted(filename):
             mycursor.execute(sql_cv_q_predict, val_cv_q_predict)
             mydb.commit()
 
-            return redirect(url_for('linkedinextract', id=ivmid, url11=url1,aname=aname1,aemail=aemail1,aaddress=aaddress1,aphone=aphone1,anic=anic1,dname=namer,dmobile=mobiler,daddress=addressr,duni=unir,ddeg=degr,dskills=skir,dexp=expr, dproject=pror))
+            return redirect(
+                url_for('linkedinextract', id=ivmid, url11=url1, aname=aname1, aemail=aemail1, aaddress=aaddress1,
+                        aphone=aphone1, anic=anic1, dname=namer, dmobile=mobiler, daddress=addressr, duni=unir,
+                        ddeg=degr, dskills=skir, dexp=expr, dproject=pror))
 
     return render_template('extracted.html', skillsx=ski, namex=nam, emailx=email, projectsx=pro, degreesx=deg,
                            universityx=uni, schoolx=school, experiencex=exp, mobilex=mobile, addressx=add,
-                           linkedinx=lin, nicx=nic1,arname=name1,lenname=len(name1),araddress=address,lenaddress=len(address),arlinkedin=linkedin,lenlinkedi=len(linkedin),
-                           arnic=nic,lennic=len(nic),aremail=email,lenemail=len(email),arproject=projects,lenproject=len(projects),ardegree=degrees,lendegree=len(degrees),
-                           aruniversity=university,lenuniversity=len(university),arschool=school,lenschool=len(school),arexperience=experience,
-                           lenexperience=len(experience),armobile=mobile,lenmobile=len(mobile),arskills=skills,lenskills=len(skills))
+                           linkedinx=lin, nicx=nic1, arname=name1, lenname=len(name1), araddress=address,
+                           lenaddress=len(address), arlinkedin=linkedin, lenlinkedi=len(linkedin),
+                           arnic=nic, lennic=len(nic), aremail=email, lenemail=len(email), arproject=projects,
+                           lenproject=len(projects), ardegree=degrees, lendegree=len(degrees),
+                           aruniversity=university, lenuniversity=len(university), arschool=school,
+                           lenschool=len(school), arexperience=experience,
+                           lenexperience=len(experience), armobile=mobile, lenmobile=len(mobile), arskills=skills,
+                           lenskills=len(skills))
 
 
+@app.route('/saved', methods=['GET', 'POST'])
+def data():
+    if request.method == 'POST':
+        namer = (request.form['finalname']).replace("\',\n,\t", "")
+        print(namer)
+
+
+# Company registation in signup page
+@app.route('/creg', methods=['GET', 'POST'])
+def reg():
+    if request.method == 'POST':
+        namer = request.form['cname']
+        mobiler = request.form['cphone']
+        addressr = request.form['caddress']
+        emailr = request.form['cemail']
+        category = request.form['ccategoty']
+        password = request.form['cpassword']
+        # cid = (namer + datetime.datetime.now().strftime("%I:%M%p%B%d%Y")).replace(":/ " , "")
+
+        sql_company = "INSERT INTO company (company_name,address,phone,email,password) VALUES (%s, %s, %s,%s, %s)"
+        val_company = (namer, addressr, mobiler, emailr, password)
+        mycursor.execute(sql_company, val_company)
+        mydb.commit()
+        cid = mycursor.lastrowid
+        return redirect(url_for('clogin'))
+
+    return render_template('joinivm.html')
+
+
+# Company login in signup page
+@app.route('/clog', methods=['GET', 'POST'])
+def clogin():
+    if request.method == 'POST':
+        username11 = (request.form['uemail'])
+        password11 = (request.form['upassword'])
+        # company login
+        mycursor.execute("SELECT * from company where email=%s AND password=%s", [username11, password11])
+        account = mycursor.fetchone()
+
+        print("Return values: " + str(account))
+
+        if account:
+            pid = str(account[0])
+            print("id: " + pid)
+
+            return redirect(url_for('profileload1', id2=pid))
+        # CV login
+        else:
+            mycursor.execute("SELECT * from cv_reg where email=%s AND password=%s;", [username11, password11])
+            account = mycursor.fetchone()
+            if account:
+                # Create session data, we can access this data in other routes
+                userid = (account[0])
+
+                Predictor.Prediction().makePredictionNb()
+                vacancy_matching = vm.sq_vacancy_matching().selectByResumeID(userid)
+
+                # Build Suggestion Result
+                matching_vacancyList = list()
+
+                for row in vacancy_matching:
+                    vacancyList = vacancies.sq_vacancies().selectVacancies(row[2])
+                    matching_vacancyList.append(vacancyList)
+
+                print("Matching Vacancy List: " + str(matching_vacancyList))
+
+                print("======================================")
+
+                return render_template('suggestion_vacancy.html', vacancyListParam=matching_vacancyList)
+
+            else:
+                # Account doesnt exist or username/password incorrect
+                msg = 'Incorrect username/password!'
+
+    return render_template('joinivm.html')
+
+
+# get company profile page after login
+ar = []
+
+
+@app.route('/company/<id2>', methods=['GET', 'POST'])
+def profileload1(id2):
+    ar.append(id2)
+    id1 = request.args.get('id2')
+    print('Profile Load Id: ' + str(id2))
+    mycursor.execute("SELECT * from vacancies where company_id='%s'", id1)
+    values1 = mycursor.fetchall()
+    for i in values1:
+        print(i[0])
+    if request.method == 'POST':
+
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part', 'warning')
+            # return redirect(url_for('index'))
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit an empty part without filename
+        if file.filename == '':
+            flash('No selected file', 'warning')
+            # return redirect(url_for('index'))
+        if file:
+            flash('Please select png/jpg/jpeg')
+            # return redirect(url_for('index'))
+        if file and allowed_file1(file.filename):
+            filename = secure_filename(file.filename)
+            print(filename)
+            # os.chmod(UPLOAD_FOLDER, 0o777)
+            # os.access('data', os.W_OK)  # Check for write access
+            # os.access('my_folder', os.R_OK)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            # return redirect('exx',file_name=filename)
+            # send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+            return redirect(url_for('extracteddetails', id=id, filename=filename))
+
+    return render_template("vacancy.html", data=values1)
+
+
+# extract vacancy details
+@app.route('/excompany/<filename>', methods=['GET', 'POST'])
+def extracteddetails(filename):
+    c_id = ar[0]
+    mycursor.execute("SELECT * from vacancies where company_id='%s'" % c_id)
+    values1 = mycursor.fetchall()
+    # vid = datetime.datetime.now().strftime("%I:%M%p%B%d%Y").replace(":/ ", "") + filename
+    pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    text = pytesseract.image_to_string(Image.open((os.path.join(app.config['UPLOAD_FOLDER'], filename))), lang='eng')
+    txt = []
+    for line in text.split('\n' or '   ' or '. ' or ','):
+        line2 = line.strip()
+        if line2 != '':
+            txt.append(line2)
+    print(txt)
+    otherskills = []
+    # education = []
+    # skills = []
+    experience = []
+    for lineindex, line in enumerate(txt):
+
+        if extract_otherskills(line) is not None:
+            otherskills.append(line)
+
+        # if extract_education(line) is not None:
+        #     education.append(line)
+
+        # if extract_skills(line) is not None:
+        #     skills.append(line)
+
+        experience = []
+        if extract_experience(line) is not None:
+            experience.append(line)
+
+    job = extract_job(text)
+    skills = extract_skills2(text)
+    education = extract_education(text)
+
+    vjob = json.dumps(job)
+    ved = json.dumps(education)
+    vsk = json.dumps(skills)
+    vos = json.dumps(otherskills)
+    vex = json.dumps(experience)
+
+    if request.method == 'POST':
+        jobv = json.dumps(request.form['vjob'])
+        eduv = json.dumps(request.form['vedu'])
+        expv = json.dumps(request.form['vexp'])
+        eyv = json.dumps(request.form['vey'])
+        vskv = json.dumps(request.form['vski'])
+        osv = json.dumps(request.form['voski'])
+        sql_vacancies = "INSERT INTO vacancies (company_id, job, education, experience, ex_year,skills,other_skills) VALUES(%s,%s,%s,%s,%s,%s,%s) "
+        val_vacancies = (c_id, jobv, eduv, expv, eyv, vskv, osv)
+        mycursor.execute(sql_vacancies, val_vacancies)
+        mydb.commit()
+        vid = mycursor.lastrowid
+        print("VID: " + str(vid))
+        vMatcher.VacancyMatching().matchingByVacencyId(vid)
+        flash("successfully saved")
+        return render_template("vacancy.html", data=values1, vvid=c_id)
+
+    return render_template('vacancyextract.html', vvjob=vjob, vved=ved, vvsk=vsk, vvos=vos, vvex=vex)
+
+
+##############################################################
+#############Testing##########################################
+##############################################################
 @app.route('/linkedin/<id>', methods=['GET', 'POST'])
 def linkedinextract(id):
     url11 = request.args.get('url11')
-    anna=request.args.get('aname')
-    anem=request.args.get('aemail')
-    anad=request.args.get('aaddress')
-    anph=request.args.get('aphone')
-    anni=request.args.get('anic')
-    skills1=request.args.get('dskills')
-    name1=request.args.get('dname')
-    projects1=request.args.get('dproject')
-    degree1=request.args.get('ddeg')
-    univercity1=request.args.get('duni')
-    experience11=request.args.get('dexp')
-    phone1=request.args.get('dmobile')
-    address1=request.args.get('daddress')
-    nic1=request.args.get('daddress')
+    anna = request.args.get('aname')
+    anem = request.args.get('aemail')
+    anad = request.args.get('aaddress')
+    anph = request.args.get('aphone')
+    anni = request.args.get('anic')
+    skills1 = request.args.get('dskills')
+    name1 = request.args.get('dname')
+    projects1 = request.args.get('dproject')
+    degree1 = request.args.get('ddeg')
+    univercity1 = request.args.get('duni')
+    experience11 = request.args.get('dexp')
+    phone1 = request.args.get('dmobile')
+    address1 = request.args.get('daddress')
+    nic1 = request.args.get('daddress')
 
     print(url11)
     lname = []
@@ -538,17 +773,19 @@ def linkedinextract(id):
     luniversity = []
     lemail1 = []
     lmobile = []
-
-    url11='ravindu-landekumbura-19950214'
+    # try:
+    url11 = 'ravindu-landekumbura-19950214'
     linkedin1 = Linkedin('slttc.info@gmail.com', 'net@telecom')
     linkprofile = linkedin1.get_profile(url11)
     print(linkprofile)
 
     contact = linkedin1.get_profile_contact_info(url11)
     print(contact)
-    lname=[]
+    lname = []
     lname1o = linkprofile['firstName']
     lname.append(json.dumps(lname1o))
+
+    # lname="Ravindu landekumbura"
 
     lskills = []
     skills = (linkprofile['skills'])
@@ -577,7 +814,6 @@ def linkedinextract(id):
         luniversity.append(nm)
         dm = sch['degreeName']
         ldegree.append(dm)
-
     lluniversity = json.dumps(luniversity)
     lldegree = json.dumps(ldegree)
     lexperience1 = json.dumps(experience1)
@@ -585,11 +821,10 @@ def linkedinextract(id):
     lemail1 = json.dumps(contact['email_address'])
     lmobile = json.dumps(contact['phone_numbers'])
 
-
     # except:
     print('cannot connect')
 
-    mycursor.execute("SELECT email from user where id=%s;",[id])
+    mycursor.execute("SELECT email from user where id=%s;", [id])
     rows = mycursor.fetchall()
     for ele in rows:
         email1 = json.dumps(ele[0]).replace('[]', "")
@@ -609,56 +844,9 @@ def linkedinextract(id):
                            projectsx=projects1, degreesx=degree1, universityx=univercity1, experiencex=experience11,
                            mobilex=phone1, addressx=address1, linkedinx=url11, nicx=nic1, namexx=lname,
                            skillsxx=llskills, experiencexx=lexperience, unversityxx=lluniversity, degreexx=lldegree,
-                           emailxx=lemail1, mobilexx=lmobile,aname=anna,aemail=anem,aaddress=anad,aphone=anph,anic=anni,ski=lskills,
-                           len = len(lskills))
-
-
-#Company login in signup page
-@app.route('/clog', methods=['GET', 'POST'])
-def clogin():
-    if request.method == 'POST':
-        username11 = (request.form['uemail'])
-        password11 = (request.form['upassword'])
-        #Company login
-        mycursor.execute("SELECT * from company where email=%s AND password=%s", [username11, password11])
-        account = mycursor.fetchall()
-
-        # print("Return values: " + account)
-
-        # if account:
-        for value in account:
-            pid = str(value[0])
-            print("id: " + pid)
-
-            return redirect(url_for('profileload1', id = pid))
-        #CV login
-        else:
-            mycursor.execute("SELECT * from cv_reg where email=%s AND password=%s;", [username11, password11])
-            account = mycursor.fetchone()
-            if account:
-                # Create session data, we can access this data in other routes
-
-                id11 = (account[0])
-                # Redirect to home page
-                skills11 = []
-                experience1 = []
-                projects1 = []
-                univercity1 = []
-                degree1 = []
-                name1 = []
-                email1 = []
-                address1 = []
-                nic1 = []
-                phone1 = []
-
-                return redirect(
-                    url_for('profile', id1=id11, skillsx=skills11, namex=name1, emailx=email1, projectsx=projects1,
-                            degreesx=degree1, universityx=univercity1, experiencex=experience1, mobilex=phone1,
-                            addressx=address1, nicx=nic1))
-            else:
-                msg = 'Incorrect username/password!'
-
-    return render_template('joinivm.html')
+                           emailxx=lemail1, mobilexx=lmobile, aname=anna, aemail=anem, aaddress=anad, aphone=anph,
+                           anic=anni, ski=lskills,
+                           len=len(lskills))
 
 if __name__ == '__main__':
     app.run(debug=True)

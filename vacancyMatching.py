@@ -8,7 +8,7 @@ class VacancyMatching:
         self.dtp = dtpClass.sq_dt_prediction()
 
     def resultFormat(self, jobTitle, precentage):
-        return jobTitle + ' - ' + str(precentage) + '%'
+        return str(jobTitle) + ' - ' + str(precentage) + '%'
 
     def updateMatching(self, jobId, userId, nbVal, dtVal):
         if self.vm.getCountId(jobId, userId) == 0:
@@ -35,4 +35,4 @@ class VacancyMatching:
 
 if __name__ == "__main__":
     vm = VacancyMatching()
-    vm.matchingByVacencyId(19)
+    vm.matchingByVacencyId(24)

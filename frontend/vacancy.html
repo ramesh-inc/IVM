@@ -101,13 +101,14 @@
           <div class="sidebar-box bg-white p-4 ftco-animate fadeInUp ftco-animated">
 		        	<h3 class="heading-sidebar">{{row[2]}}</h3>
 
-		        	<form action="#" class="browse-form">
+		        	<form method="post" action="/build_resume_list" class="browse-form">
 <!--							  <label > Website &amp; Software</label><br>-->
 <!--							  <label > Education &amp; Training</label><br>-->
 <!--							  <label >Graphics Design</label><br>-->
 <!--							  <label > Accounting &amp; Finance</label><br>-->
 <!--							  <label > Restaurant &amp; Food</label><br>-->
 <!--							  <label > Health &amp; Hospital</label><br>-->
+                        <input type="hidden" name="vacancy_id" id="vacancy_id" value="{{row[0]}}">
                                     <p>Education</p>
 									<p>{{row[3]}}</p><br>
 									<p>Experience</p>
