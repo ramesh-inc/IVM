@@ -271,9 +271,6 @@ def build_resume_list():
     return render_template('suggetion_resume.html', candidates=candidates)
 
 
-
-
-
 # Madhushani
 
 # get signup/Sign In page after clicking sign in button in home page
