@@ -33,6 +33,7 @@ from linkedin_api import Linkedin
 from ivmvacancy import extract_education, extract_skills2, extract_job
 
 import mysql.connector
+import stripe
 
 from extraction.utility.parser_rules import extract_sex, extract_email, extract_otherskills, extract_experience, \
     extract_degree, extract_university, extract_school
@@ -63,6 +64,11 @@ ALLOWED_EXTENSIONS1 = {'png', 'jpg', 'jpeg','jpg'}
 app = Flask(__name__, template_folder='frontend', static_folder='frontend')
 app.secret_key = 'super secret key'
 
+pub_key = 'pk_test_P1MvPnXxIHwukqqy0NdHlXlF006QzC85Ad'
+secret_key = 'sk_test_tn3GRH4jUlxFlUXCIierh91p00bF6TYZ4z'
+
+stripe.api_key = secret_key
+
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -81,6 +87,28 @@ def allowed_file1(filename):
 def home():
     return render_template('index.html')
 
+
+@app.route('/thanks')
+def thanks():
+    return render_template('payment/thanks.html')
+
+
+@app.route('/pay', methods=['POST'])
+def pay():
+    print(request.form)
+
+    candidate_id = request.form['candidate_id']
+
+    customer = stripe.Customer.create(email=request.form['stripeEmail'], source=request.form['stripeToken'])
+
+    charge = stripe.Charge.create(
+        customer=customer.id,
+        amount=1000,
+        currency='usd',
+        description='The Resume'
+    )
+
+    return render_template('thanks.html',candidate_id=candidate_id)
 
 #Route to fill RESUME FORM
 @app.route("/resume_details", methods=['GET', 'POST'])
@@ -251,7 +279,7 @@ def upload_vacancy():
 
         print(candidates)
         print(anonimityList)
-
+    #
     else:
         return render_template('suggetion_resume.html')
     return render_template('suggetion_resume.html', candidates=anonimityList)
@@ -604,6 +632,8 @@ def extracted(filename):
             val_cv_q_predict = (ivmid, age, skir, pror, experience_yrs, unir, degr, spr, obj)
             mycursor.execute(sql_cv_q_predict, val_cv_q_predict)
             mydb.commit()
+
+            os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)),(os.path.join(app.config['UPLOAD_FOLDER'], ivmid)))
 
             return redirect(
                 url_for('linkedinextract', id=ivmid, url11=url1, aname=anonimized_name, aemail=anonimized_email, aaddress=anonimized_address,
