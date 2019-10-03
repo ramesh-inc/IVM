@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
 
     <link rel="stylesheet" href="/frontend/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="/frontend/css/animate.css">
@@ -148,6 +149,124 @@
         margin-left: 0px;
         font-size: 11px;}
       </style>
+      <style>
+      .range-style {
+        position: relative;
+        z-index: 1000;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: transparent;
+        height: 6px;
+        border-radius: 3px;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
+      }
+      .thumb-style {
+        position: relative;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #4d91ea;
+        border: 1px solid #165dbb;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 5000;
+        transition: background 0.3s ease-in-out;
+      }
+      .thumb-style_hover {
+        background: #165dbb;
+        transition: background 0.3s ease-in-out;
+      }
+      .slider-container {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin: 15px 0;
+      }
+      input[type='range'] {
+        position: relative;
+        z-index: 1000;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: transparent;
+        height: 6px;
+        border-radius: 3px;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
+      }
+      input[type='range']::-webkit-slider-thumb {
+        position: relative;
+        -webkit-appearance: none;
+                appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #4d91ea;
+        border: 1px solid #165dbb;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 5000;
+        transition: background 0.3s ease-in-out;
+      }
+      input[type='range']::-webkit-slider-thumb:hover,
+      input[type='range']::-webkit-slider-thumb:active {
+        background: #165dbb;
+        transition: background 0.3s ease-in-out;
+      }
+      input[type='range']::-moz-range-track {
+        background: transparent;
+      }
+      input[type='range']::-moz-range-thumb {
+        position: relative;
+        -moz-appearance: none;
+             appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #4d91ea;
+        border: 1px solid #165dbb;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 5000;
+        transition: background 0.3s ease-in-out;
+      }
+      input[type='range']::-moz-range-thumb:hover,
+      input[type='range']::-moz-range-thumb:active {
+        background: #165dbb;
+        transition: background 0.3s ease-in-out;
+      }
+      .fill {
+        position: absolute;
+        z-index: 50;
+        top: 50%;
+        height: 6px;
+        width: 50%;
+        border-radius: 6px;
+        background: linear-gradient(to right, #d6e6fa 0%, #165dbb 100%);
+      }
+      .count {
+        position: absolute;
+        top: -18px;
+        left: 0;
+        border: 1px solid #165dbb;
+        background: #4d91ea;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 20px;
+        text-align: center;
+        width: 18px;
+        margin-left: 0px;
+        font-size: 11px;
+      }
+    </style>
   </head>
   <body>
 
@@ -205,58 +324,33 @@
       <div class="container">
 
         <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-<!--            <form action="#" class="bg-white p-5 contact-form" id="details">-->
-<!--              <h3>Set Privacy Level</h3>-->
-<!--              <br/><br/><br/><br/>-->
-<!--              <div class="form-group">-->
-<!--                <p>Name</p>-->
 
-<!--              </div>-->
-<!--<br/><br/><br/>-->
-<!--               <div class="form-group">-->
-<!--                <p>Phone</p>-->
-
-<!--              </div>-->
-<!--<br/><br/><br/><br/>-->
-<!--               <div class="form-group">-->
-<!--                <p>Address</p>-->
-
-<!--              </div>-->
-<!--<br/><br/><br/><br/>-->
-<!--               <div class="form-group">-->
-<!--                <p>E-mail</p>-->
-
-<!--              </div>-->
-<!--<br/><br/><br/>-->
-
-<!--               <div class="form-group">-->
-<!--                <p>NIC</p>-->
-
-<!--              </div>-->
-
-<!--            </form>-->
-
-          </div>
-
-          <div class="col-md-6 d-flex">
+          <div class="col-md-12 d-flex">
           	<form method="post" class="bg-white p-5 contact-form" id="listdata">
               <div class="form-group">
                 <h3>Your Data</h3>
                 <p>LinkedIn ID</p>
                 <input type="text" class="form-control" placeholder="LinkedIn ID" name="linkedin_link" value={{linkedinx}}>
-               <div class="form-group">
+                <div class="form-group">
                  <p>Name</P>
-                <textarea name="full_name"  cols="30" rows="7" class="form-control" placeholder="Name" >
+                    <textarea name="full_name"  cols="30" rows="7" class="form-control" placeholder="Name" >
                   {%for i in range(0, lenname)%}
 							{{arname[i]}}
 							{%endfor%}
-                </textarea>
-                 <div class="slider-container">
-      <input id="slider" type="range" min="0" max="10" value="0" name="sname" />
-      <div class="count">0</div>
-      <div class="fill"></div>
-    </div>
+                    </textarea>
+                 <div class="anonymity-slider-container">
+                     <div class="slider-container">
+                      <input class="slider" name="a_name" type="range" min="0" max="10" value="5"/>
+                      <div class="count">5</div>
+                      <div class="fill"></div>
+                    </div>
+                    <div class="about_anonimization">
+                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        <div class="about_anony_txt">
+                          Slide the slider to preferred anonymity level of your private data.<br>Ex: If your name is "ABCD" and you choose <strong>5</strong> for anonymization, your privacy will be "xxCD"
+                        </div>
+                    </div>
+                  </div>
               </div>
                 <p>Phone</P>
                  <div class="form-group">
@@ -265,11 +359,19 @@
 							{{armobile[i]}}
 							{%endfor%}
                 </textarea>
-                   <div class="slider-container">
-      <input id="slider1" type="range" min="0" max="10" value="0" name="sphone" />
-      <div class="count">0</div>
-      <div class="fill"></div>
-    </div>
+                   <div class="anonymity-slider-container">
+                     <div class="slider-container">
+                      <input class="slider" name="a_phone" type="range" min="0" max="10" value="5"/>
+                      <div class="count">5</div>
+                      <div class="fill"></div>
+                    </div>
+                    <div class="about_anonimization">
+                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        <div class="about_anony_txt">
+                          Slide the slider to preferred anonymity level of your private data.<br>Ex: If your name is "ABCD" and you choose <strong>5</strong> for anonymization, your privacy will be "xxCD"
+                        </div>
+                    </div>
+                  </div>
               </div>
                  <div class="form-group">
                    <p>Address</p>
@@ -278,11 +380,19 @@
 							{{araddress[i]}}
 							{%endfor%}
                 </textarea>
-                    <div class="slider-container">
-      <input id="slider2" type="range" min="0" max="10" value="0" name="saddress"/>
-      <div class="count">0</div>
-      <div class="fill"></div>
-    </div>
+                   <div class="anonymity-slider-container">
+                     <div class="slider-container">
+                      <input class="slider" name="a_address" type="range" min="0" max="10" value="5"/>
+                      <div class="count">5</div>
+                      <div class="fill"></div>
+                    </div>
+                    <div class="about_anonimization">
+                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        <div class="about_anony_txt">
+                          Slide the slider to preferred anonymity level of your private data.<br>Ex: If your name is "ABCD" and you choose <strong>5</strong> for anonymization, your privacy will be "xxCD"
+                        </div>
+                    </div>
+                  </div>
               </div>
                  <div class="form-group">
                    <p>Email</p>
@@ -291,11 +401,19 @@
 							{{aremail[i]}}
 							{%endfor%}
                 </textarea>
-                    <div class="slider-container">
-      <input id="slider3" type="range" min="0" max="10" value="0" name="semail" />
-      <div class="count">0</div>
-      <div class="fill"></div>
-    </div>
+                <div class="anonymity-slider-container">
+                     <div class="slider-container">
+                      <input class="slider" name="a_email" type="range" min="0" max="10" value="5"/>
+                      <div class="count">5</div>
+                      <div class="fill"></div>
+                    </div>
+                    <div class="about_anonimization">
+                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        <div class="about_anony_txt">
+                          Slide the slider to preferred anonymity level of your private data.<br>Ex: If your name is "ABCD" and you choose <strong>5</strong> for anonymization, your privacy will be "xxCD"
+                        </div>
+                    </div>
+                  </div>
               </div>
                  <div class="form-group">
                    <p>NIC</P>
@@ -521,6 +639,16 @@
       	});
       	$('.fill').css('width', this.value + '0%');
       }
+    </script>
+
+    <script type="text/javascript">
+      $('.slider').on('input',function(){
+        $(this).parents('.slider-container').find('.count').text(this.value).css({
+              'left': this.value + '%',
+              'transform': 'translateX(-' + this.value + '%)'
+        });
+        $(this).parents('.slider-container').find('.fill').css('width', this.value + '0%');
+      });
     </script>
 
   </body>
