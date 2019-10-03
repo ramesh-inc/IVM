@@ -140,11 +140,30 @@ def upload_resume():
         obj = ''
 
         # Anonymize Values
-        anonimized_name = name.replace(name[0:math.ceil((int(len(name)-1) * int(a_name)) / 10):], "XXX")
-        anonimized_address = address.replace(address[0:math.ceil((int(len(address)-1) * int(a_address)) / 10):], "XXX")
-        anonimized_nic = nic.replace(nic[0:math.ceil((int(len(nic)) * int(a_nic)-1) / 10):], "XXX")
-        anonimized_email = email.replace(email[0:math.ceil((int(len(email)-1) * int(a_email)) / 10):], "XXX")
-        anonimized_phone = phone.replace(phone[0:math.ceil((int(len(phone)-1) * int(a_phone)) / 10):], "XXX")
+        if(int(a_name) != 0):
+            anonimized_name = name.replace(name[0:math.ceil((int(len(name)-1) * int(a_name)) / 10):], "XXX")
+        else:
+            anonimized_name = name
+
+        if(int(a_address) != 0):
+            anonimized_address = address.replace(address[0:math.ceil((int(len(address)-1) * int(a_address)) / 10):], "XXX")
+        else:
+            anonimized_address = address
+
+        if(int(a_nic)!= 0):
+            anonimized_nic = nic.replace(nic[0:math.ceil((int(len(nic)-1) * int(a_nic)) / 10):], "XXX")
+        else:
+            anonimized_nic = nic
+
+        if(int(a_email) != 0):
+            anonimized_email = email.replace(email[0:math.ceil((int(len(email)-1) * int(a_email)) / 10):], "XXX")
+        else:
+            anonimized_email = email
+
+        if(int(a_phone) != 0):
+            anonimized_phone = phone.replace(phone[0:math.ceil((int(len(phone)-1) * int(a_phone)) / 10):], "XXX")
+        else:
+            anonimized_phone = phone
 
         userid = userClass.user().insertUser(age, name, address, nic, email, phone)
         cvPredict.cv_q_predict().insertPredictionData(userid, age, skills, projects, exp_yrs, university, degree, specialization, obj)
@@ -226,10 +245,8 @@ def upload_vacancy():
 
         for row in matchingDetails:
             user = userClass.user().selectUser(row[1])
-            print(row[1])
             anonimityValues = anonimity.anonimity().selectByUserID(row[1])
             candidates.append(user)
-            print(anonimityValues)
             anonimityList.append(anonimityValues)
 
         print(candidates)
@@ -245,30 +262,31 @@ def upload_vacancy():
 def build_resume_list():
     if request.method == 'POST':
         vacancyId = request.form['vacancy_id']
-        # vMatcher.VacancyMatching().matchingByVacencyId(vacancyId)
+        vMatcher.VacancyMatching().matchingByVacencyId(vacancyId)
 
         print("Vacancy Id: " + vacancyId)
-        matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(vacancyId)
+        matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(int(vacancyId))
+        print("Matching Details: " + str(matchingDetails))
 
 
         # Build Suggestion Result
         candidates = list()
-        # anonimityList = list()
+        anonimityList = list()
 
         for row in matchingDetails:
             user = userClass.user().selectUser(row[1])
             print(row[1])
-            # anonimityValues = anonimity.anonimity().selectByUserID(row[1])
+            anonimityValues = anonimity.anonimity().selectByUserID(row[1])
             candidates.append(user)
-            # print(anonimityValues)
-            # anonimityList.append(anonimityValues)
+            print(anonimityValues)
+            anonimityList.append(anonimityValues)
 
         print(candidates)
-        # print(anonimityList)
+        print(anonimityList)
 
     else:
         return render_template('suggetion_resume.html')
-    return render_template('suggetion_resume.html', candidates=candidates)
+    return render_template('suggetion_resume.html', candidates=anonimityList)
 
 
 # Madhushani
@@ -503,30 +521,37 @@ def extracted(filename):
             url1 = (request.form['linkedin_link'])
             # url1 = json.dumps(request.form['linkedin_link'], ensure_ascii=False)
 
-            sname = int(request.form['sname'])
-            sphone = int(request.form['sphone'])
-            saddress = int(request.form['saddress'])
-            semail = int(request.form['semail'])
-            snic = int(request.form['snic'])
+            # sname = int(request.form['sname'])
+            # sphone = int(request.form['sphone'])
+            # saddress = int(request.form['saddress'])
+            # semail = int(request.form['semail'])
+            # snic = int(request.form['snic'])
 
-            namenum = round((len(namer) / 10)) * sname
-            print(namenum)
-            emailnum = round((len(emailr) / 10)) * semail
-            addressnum = round((len(addressr) / 10)) * saddress
-            phonenum = round((len(mobiler) / 10)) * sphone
-            nicnum = round((len(nicr) / 10)) * snic
+            # namenum = round((len(namer) / 10)) * sname
+            # print(namenum)
+            # emailnum = round((len(emailr) / 10)) * semail
+            # addressnum = round((len(addressr) / 10)) * saddress
+            # phonenum = round((len(mobiler) / 10)) * sphone
+            # nicnum = round((len(nicr) / 10)) * snic
 
             # AC = input("What is your Preferred Privacy Level: 1- Fully Anonymized   2- Partially Anonymized    3- Totally Visible :")
 
-            aname1 = namer[:(len(namer)) - namenum], ("xxxx")
-            aemail1 = emailr[:len(emailr) - emailnum]
-            aaddress1 = addressr[:len(addressr) - addressnum]
-            aphone1 = mobiler[:len(mobiler) - phonenum]
-            anic1 = nicr[:len(nicr) - nicnum]
+            # aname1 = namer[:(len(namer)) - namenum], ("xxxx")
+            # aemail1 = emailr[:len(emailr) - emailnum]
+            # aaddress1 = addressr[:len(addressr) - addressnum]
+            # aphone1 = mobiler[:len(mobiler) - phonenum]
+            # anic1 = nicr[:len(nicr) - nicnum]
             job = "Software Engineer"
             age = 25
             nbstatus = 0
             dtstats = 0
+
+            # Anonimity Details
+            a_name = request.form['a_name']
+            a_email = request.form['a_email']
+            a_address = request.form['a_address']
+            a_nic = request.form['a_nic']
+            a_phone = request.form['a_phone']
 
             sql_user = "insert into user(age, name, address,nic, email, phone,  experience) values(%s, %s, %s, %s, %s, %s,%s)"
 
@@ -535,6 +560,45 @@ def extracted(filename):
             mydb.commit()
             ivmid = mycursor.lastrowid
 
+            print("Anonimity Level")
+            print('Anonimity Value for Name: ' + a_name)
+            print('Anonimity Value for Email: ' + a_email)
+            print('Anonimity Value for Phone: ' + a_phone)
+            print('Anonimity Value for Address: ' + a_address)
+            print('Anonimity Value for NIC: ' + a_nic)
+            print("======================================")
+
+            projects = ''
+            obj = ''
+
+            # Anonymize Values
+            if (int(a_name) != 0):
+                anonimized_name = namer.replace(namer[0:math.ceil((int(len(namer) - 1) * int(a_name)) / 10):], "XXX")
+            else:
+                anonimized_name = namer
+
+            if (int(a_address) != 0):
+                anonimized_address = addressr.replace(addressr[0:math.ceil((int(len(addressr) - 1) * int(a_address)) / 10):], "XXX")
+            else:
+                anonimized_address = addressr
+
+            if (int(a_nic) != 0):
+                anonimized_nic = nicr.replace(nicr[0:math.ceil((int(len(nicr)) * int(a_nic) - 1) / 10):], "XXX")
+            else:
+                anonimized_nic = nicr
+
+            if (int(a_email) != 0):
+                anonimized_email = emailr.replace(emailr[0:math.ceil((int(len(emailr) - 1) * int(a_email)) / 10):], "XXX")
+            else:
+                anonimized_email = emailr
+
+            if (int(a_phone) != 0):
+                anonimized_phone = mobiler.replace(mobiler[0:math.ceil((int(len(mobiler) - 1) * int(a_phone)) / 10):], "XXX")
+            else:
+                anonimized_phone = mobiler
+
+            anonimity.anonimity().insertAnonimity(ivmid, anonimized_name, anonimized_address, anonimized_nic, anonimized_email, anonimized_phone)
+
             sql_cv_q_predict = "insert into cv_q_predict(userid, age, skills, projects,experience_yrs, university, degree,  specialization,objectives) values(%s, %s, %s, %s, %s, %s, %s,%s, %s)"
 
             val_cv_q_predict = (ivmid, age, skir, pror, experience_yrs, unir, degr, spr, obj)
@@ -542,8 +606,8 @@ def extracted(filename):
             mydb.commit()
 
             return redirect(
-                url_for('linkedinextract', id=ivmid, url11=url1, aname=aname1, aemail=aemail1, aaddress=aaddress1,
-                        aphone=aphone1, anic=anic1, dname=namer, dmobile=mobiler, daddress=addressr, duni=unir,
+                url_for('linkedinextract', id=ivmid, url11=url1, aname=anonimized_name, aemail=anonimized_email, aaddress=anonimized_address,
+                        aphone=anonimized_phone, anic=anonimized_nic, dname=namer, dmobile=mobiler, daddress=addressr, duni=unir,
                         ddeg=degr, dskills=skir, dexp=expr, dproject=pror))
 
     return render_template('extracted.html', skillsx=ski, namex=nam, emailx=email, projectsx=pro, degreesx=deg,

@@ -10040,6 +10040,7 @@ nav.awake .header-logo .dark-logo{
 .anonymity-slider-container .about_anonimization{
     width: 50px;
     text-align: right;
+    position: relative;
 }
 .about_anony_txt{
     display: none;
