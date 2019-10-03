@@ -9,7 +9,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/IVM$integration_module.coverage" NAME="integration_module Coverage Results" MODIFIED="1570092148615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/IVM$integration_module.coverage" NAME="integration_module Coverage Results" MODIFIED="1570080289731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
     <SUITE FILE_PATH="coverage/IVM$vacancyMatching.coverage" NAME="vacancyMatching Coverage Results" MODIFIED="1570077718502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$vacancyMatching.coverage" NAME="vacancyMatching Coverage Results" MODIFIED="1570001119377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$nbTrainClassifier.coverage" NAME="nbTrainClassifier Coverage Results" MODIFIED="1569910355140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -26,8 +30,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/integration_module.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="263">
               <caret line="110" column="53" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="53" />
+=======
+            <state relative-caret-position="136">
+              <caret line="265" column="25" lean-forward="true" selection-start-line="265" selection-start-column="25" selection-end-line="265" selection-end-column="25" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
               </folding>
@@ -36,6 +45,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/frontend/thanks.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
@@ -76,9 +86,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbModule/sq_vacancy_matching.py">
+=======
+        <entry file="file://$PROJECT_DIR$/extraction/finalscript.py">
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="136">
+              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -99,6 +112,7 @@
       <find>../Frontend</find>
       <find>insert into</find>
       <find>print(</find>
+<<<<<<< HEAD
       <find>extract</find>
       <find>extracted.html</find>
       <find>insert into user</find>
@@ -107,6 +121,8 @@
       <find>candi</find>
       <find>candidates</find>
       <find>/pay</find>
+=======
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,17 +132,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/vacancyMatching.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/frontend/extracted.html" />
         <option value="$PROJECT_DIR$/frontend/linkedin.html" />
         <option value="$PROJECT_DIR$/frontend/payment/app.py" />
         <option value="$PROJECT_DIR$/frontend/css/style.css" />
         <option value="$PROJECT_DIR$/frontend/suggetion_resume.html" />
+=======
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
         <option value="$PROJECT_DIR$/integration_module.py" />
         <option value="$PROJECT_DIR$/frontend/thanks.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="77" />
     <option name="y" value="-8" />
     <option name="width" value="1377" />
@@ -150,12 +169,13 @@
             <path>
               <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
               <item name="IVM" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="extraction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
               <item name="IVM" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="payment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -171,6 +191,8 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="payment" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
             </path>
             <path>
               <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
@@ -190,11 +212,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -219,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.integration_module">
+  <component name="RunManager" selected="Python.finalscript">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cv_full" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -339,9 +362,15 @@
     </list>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python.app" />
         <item itemvalue="Python.vacancyMatching" />
         <item itemvalue="Python.finalscript" />
+=======
+        <item itemvalue="Python.finalscript" />
+        <item itemvalue="Python.vacancyMatching" />
+        <item itemvalue="Python.app" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
         <item itemvalue="Python.nbTrainClassifier" />
       </list>
     </recent_temporary>
@@ -365,13 +394,21 @@
       <workItem from="1569819061612" duration="5337000" />
       <workItem from="1569905242780" duration="9418000" />
       <workItem from="1569990045544" duration="17186000" />
+<<<<<<< HEAD
       <workItem from="1570076023098" duration="6002000" />
       <workItem from="1570084196993" duration="7193000" />
+=======
+      <workItem from="1570076023098" duration="4165000" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="59556000" />
+=======
+    <option name="totallyTimeSpent" value="50526000" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,15 +420,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24925596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,7 +436,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -444,6 +481,12 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/blog.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -456,15 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/finalscript.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -501,6 +535,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/frontend/resume_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -531,13 +566,16 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
     <entry file="file://$PROJECT_DIR$/dbModule/sq_vacancy_matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="124">
           <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/frontend/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -576,16 +614,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="110" column="53" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="53" />
+=======
+    <entry file="file://$PROJECT_DIR$/integration_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="265" column="25" lean-forward="true" selection-start-line="265" selection-start-column="25" selection-end-line="265" selection-end-column="25" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
           <folding>
             <element signature="e#0#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/frontend/thanks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+=======
+    <entry file="file://$PROJECT_DIR$/extraction/finalscript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+>>>>>>> c8de516617c17e72ad2d50af7ec89df1b46a4bcf
         </state>
       </provider>
     </entry>
