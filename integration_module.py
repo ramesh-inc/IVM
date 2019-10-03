@@ -814,12 +814,12 @@ def extracteddetails(filename):
     vex = json.dumps(experience)
 
     if request.method == 'POST':
-        jobv = json.dumps(request.form['vjob'])
-        eduv = json.dumps(request.form['vedu'])
-        expv = json.dumps(request.form['vexp'])
-        eyv = json.dumps(request.form['vey'])
-        vskv = json.dumps(request.form['vski'])
-        osv = json.dumps(request.form['voski'])
+        jobv = request.form['vjob']
+        eduv = request.form['vedu']
+        expv = request.form['vexp']
+        eyv = request.form['vey']
+        vskv = request.form['vski']
+        osv = request.form['voski']
         sql_vacancies = "INSERT INTO vacancies (company_id, job, education, experience, ex_year,skills,other_skills) VALUES(%s,%s,%s,%s,%s,%s,%s) "
         val_vacancies = (c_id, jobv, eduv, expv, eyv, vskv, osv)
         mycursor.execute(sql_vacancies, val_vacancies)
@@ -872,7 +872,7 @@ def linkedinextract(id):
     print(contact)
     lname = []
     lname1o = linkprofile['firstName']
-    lname.append(json.dumps(lname1o))
+    lname.append(lname1o)
 
     # lname="Ravindu landekumbura"
 
