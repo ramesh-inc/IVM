@@ -17,6 +17,7 @@ def extract_name(line):
 def extract_address(line):
         address=None
         y = line.find("address")
+
         if y==0:
             address=line
         else:
@@ -30,6 +31,7 @@ def extract_nic(line):
         y=list(words1)
         if len(y)==10:
             if (y[0]==9 or y[0]==8) and (y[9]=="v" or y[9]=="V"):
+
                 nic = words1
             else:
                 nic=None
@@ -192,6 +194,22 @@ def extract_university(line):
             return None
     return result
 
+def extract_specialization(line):
+    length = 4
+    line = line.lower()
+    index = line.find('specialize')
+    if index == -1:
+        index = line.find('specializaton')
+
+    result = None
+    if index == -1:
+        return None
+    else:
+        result = line
+        if result == '':
+            return None
+    return result
+
 def extract_school(line):
 
     line = line.lower()
@@ -227,17 +245,17 @@ def extract_ethnicity(parts, line):
     return race
 
 
-def extract_name(parts, line):
-    found = False
-    result = None
-    for w in parts:
-        if w.find('name') != -1:
-            found = True
-            continue
-        if found and w.find(':') == -1:
-            result = w
-            break
-    return result
+# def extract_name(parts, line):
+#     found = False
+#     result = None
+#     for w in parts:
+#         if w.find('name') != -1:
+#             found = True
+#             continue
+#         if found and w.find(':') == -1:
+#             result = w
+#             break
+#     return result
 
 
 def extract_objective(parts, line):
@@ -301,7 +319,7 @@ def extract_objectives(line):
 
 SKILLS=['machine learning', 'ml', 'artificial intelligence', 'ai', 'natural language processing', 'nlp', 'java',  'javascript',  'php',  'c++', 'Spring',  'reactjs',  'reactnative',  'angular 2', 'maven',  'docker',  'jenkins',  'travis', 'mysql',  'mariadb', 'mongodb',
         'windows',  'linux',  'macos',  'c', 'c++',  'java',  '.net',  'mysql', 'microsoft Office',  'netBeans', 'html',
-        'css',  'php','sql server data tools', 'sql Server Management studio', 'ms sql report builder', 'excel power bi','.net']
+        'css',  'php','sql server data tools', 'sql', 'Server', 'Management', 'studio', 'ms sql report builder', 'excel power bi','.net']
 
 def extract_skills(txt):
     txtn=[]

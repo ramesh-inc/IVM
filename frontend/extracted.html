@@ -334,8 +334,8 @@
                 <div class="form-group">
                  <p>Name</P>
                     <textarea name="full_name"  cols="30" rows="7" class="form-control" placeholder="Name" >
-                  {%for i in range(0, lenname)%}
-							{{arname[i]}}
+                  {%for i in range(0, 1)%}
+							{{arname[0]}}
 							{%endfor%}
                     </textarea>
                  <div class="anonymity-slider-container">
@@ -355,8 +355,8 @@
                 <p>Phone</P>
                  <div class="form-group">
                 <textarea name="phone_number"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lenmobile)%}
-							{{armobile[i]}}
+                  {%for i in range(0, 1)%}
+							{{armobile[0]}}
 							{%endfor%}
                 </textarea>
                    <div class="anonymity-slider-container">
@@ -376,8 +376,8 @@
                  <div class="form-group">
                    <p>Address</p>
                 <textarea name="address"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lenaddress)%}
-							{{araddress[i]}}
+                  {%for i in range(0, 1)%}
+							{{araddress[0]}}
 							{%endfor%}
                 </textarea>
                    <div class="anonymity-slider-container">
@@ -397,8 +397,8 @@
                  <div class="form-group">
                    <p>Email</p>
                 <textarea name="email"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lenemail)%}
-							{{aremail[i]}}
+                  {%for i in range(0, 1)%}
+							{{aremail[0]}}
 							{%endfor%}
                 </textarea>
                 <div class="anonymity-slider-container">
@@ -418,8 +418,8 @@
                  <div class="form-group">
                    <p>NIC</P>
                 <textarea name="nic"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lennic)%}
-							{{arnic[i]}}
+                  {%for i in range(0, 1)%}
+							{{arnic[0]}}
 							{%endfor%}
                 </textarea>
                 <div class="anonymity-slider-container">
@@ -472,8 +472,10 @@
                    <p>Skills</P>
                 <textarea name="skills"  cols="30" rows="7" class="form-control" placeholder="Message">
                      {%for i in range(0, lenskills)%}
-							{{arskills[i]}}
+                            for x in i
+							    {{arskills[x]}}
 							{%endfor%}
+                    {%endfor%}
                 </textarea>
               </div>
                  <div class="form-group">
