@@ -25,7 +25,13 @@
 
     <link rel="stylesheet" href="/frontend/css/flaticon.css">
     <link rel="stylesheet" href="/frontend/css/icomoon.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/frontend/payment/static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/frontend/payment/static/narrow-jumbotron.css" rel="stylesheet">
     <link rel="stylesheet" href="/frontend/css/style.css">
+
 
     <link rel="shortcut icon" type="image/png" href="/frontend/images/favicon.png"/>
 
@@ -118,7 +124,21 @@
 									<p class="mb-2">NIC: {{candidate[6]}}</p>
 									<span class="seen">Email: {{candidate[3]}}</span>
                                     <p class="seen">Phone: {{candidate[5]}}</p>
-									<p><a href="#" class="btn btn-primary">View Full Details</a></p>
+									<div class="jumbotron pay-btn-wrapper">
+                                      <form action="/pay" method="POST">
+                                        <input type="hidden" name="candidate_id" value="{{candidate[0]}}">
+                                        <script
+                                          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                          data-key="pk_test_P1MvPnXxIHwukqqy0NdHlXlF006QzC85Ad"
+                                          data-amount="1000"
+                                          data-name="IVM"
+                                          data-description="Widget"
+                                          data-image="http://ivm.oriad.lk/images/dark-logo.png"
+                                          data-locale="auto">
+                                        </script>
+                                        <button type="submit" class="resume-pay-btn"><span>View More Details</span></button>
+                                      </form>
+                                    </div>
 								</div>
                           </div>
                   </div>
@@ -222,5 +242,12 @@
 <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
 <!--  <script src="/frontend/js/google-map.js"></script>-->
     <script src="/frontend/js/main.js"></script>
+
+
+                                        <script>
+                                            // Hide default stripe button, be careful there if you
+                                            // have more than 1 button of that class
+                                            $('.stripe-button-el').hide();
+                                        </script>
   </body>
 </html>

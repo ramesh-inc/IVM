@@ -9,24 +9,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/IVM$integration_module.coverage" NAME="integration_module Coverage Results" MODIFIED="1570084267727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IVM$integration_module.coverage" NAME="integration_module Coverage Results" MODIFIED="1570092148615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IVM$vacancyMatching.coverage" NAME="vacancyMatching Coverage Results" MODIFIED="1570077718502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$vacancyMatching.coverage" NAME="vacancyMatching Coverage Results" MODIFIED="1570001119377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$nbTrainClassifier.coverage" NAME="nbTrainClassifier Coverage Results" MODIFIED="1569910355140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$integration_module.coverage" NAME="integration_module Coverage Results" MODIFIED="1570010073206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$predictionDT.coverage" NAME="predictionDT Coverage Results" MODIFIED="1569168207950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$finalscript.coverage" NAME="finalscript Coverage Results" MODIFIED="1570010093128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/extraction" />
+    <SUITE FILE_PATH="coverage/IVM$app.coverage" NAME="app Coverage Results" MODIFIED="1570092008683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/payment" />
     <SUITE FILE_PATH="coverage/cv_full$app.coverage" NAME="app Coverage Results" MODIFIED="1569992367624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/payment" />
     <SUITE FILE_PATH="coverage/cv_full$nbPrediction.coverage" NAME="nbPrediction Coverage Results" MODIFIED="1569823630555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cv_full$dtTrainDataset.coverage" NAME="dtTrainDataset Coverage Results" MODIFIED="1569910312069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/integration_module.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="288" column="76" selection-start-line="288" selection-start-column="76" selection-end-line="288" selection-end-column="76" />
+            <state relative-caret-position="263">
+              <caret line="110" column="53" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="53" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
               </folding>
@@ -34,11 +35,41 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/thanks.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/payment/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/suggetion_resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="117" column="77" lean-forward="true" selection-start-line="117" selection-start-column="77" selection-end-line="117" selection-end-column="77" />
+            <state relative-caret-position="93">
+              <caret line="128" column="79" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="79" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="10120" column="20" selection-start-line="10120" selection-start-column="20" selection-end-line="10120" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -75,6 +106,7 @@
       <find>anonimized_phone</find>
       <find>candi</find>
       <find>candidates</find>
+      <find>/pay</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,11 +116,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/vacancyMatching.py" />
-        <option value="$PROJECT_DIR$/frontend/css/style.css" />
         <option value="$PROJECT_DIR$/frontend/extracted.html" />
         <option value="$PROJECT_DIR$/frontend/linkedin.html" />
+        <option value="$PROJECT_DIR$/frontend/payment/app.py" />
+        <option value="$PROJECT_DIR$/frontend/css/style.css" />
         <option value="$PROJECT_DIR$/frontend/suggetion_resume.html" />
         <option value="$PROJECT_DIR$/integration_module.py" />
+        <option value="$PROJECT_DIR$/frontend/thanks.html" />
       </list>
     </option>
   </component>
@@ -122,7 +156,21 @@
               <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
               <item name="IVM" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="payment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IVM" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="payment" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IVM" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="payment" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IVM" type="b2602c69:ProjectViewProjectNode" />
@@ -149,7 +197,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UCER\Desktop\IVM\frontend\payment" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UCER\Desktop\IVM\frontend" />
       <recent name="C:\Users\User\Desktop\Research\dev\IVM - 23.9.2019\cv_full\IVM\extraction\Frontend" />
       <recent name="C:\Users\UCER\Desktop\cv_full\frontend" />
       <recent name="C:\Users\UCER\Desktop\cv_full" />
@@ -287,9 +339,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.vacancyMatching" />
         <item itemvalue="Python.finalscript" />
-        <item itemvalue="Python.app" />
         <item itemvalue="Python.nbTrainClassifier" />
       </list>
     </recent_temporary>
@@ -314,12 +366,12 @@
       <workItem from="1569905242780" duration="9418000" />
       <workItem from="1569990045544" duration="17186000" />
       <workItem from="1570076023098" duration="6002000" />
-      <workItem from="1570084196993" duration="3327000" />
+      <workItem from="1570084196993" duration="7193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55690000" />
+    <option name="totallyTimeSpent" value="59556000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="10042" column="5" selection-start-line="10042" selection-start-column="5" selection-end-line="10042" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/resume_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -477,6 +522,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/payment/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335">
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbModule/sq_vacancy_matching.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -484,20 +538,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="10120" column="20" selection-start-line="10120" selection-start-column="20" selection-end-line="10120" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/suggetion_resume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="117" column="77" lean-forward="true" selection-start-line="117" selection-start-column="77" selection-end-line="117" selection-end-column="77" />
+        <state relative-caret-position="93">
+          <caret line="128" column="79" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="79" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/payment/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/payment/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/integration_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="288" column="76" selection-start-line="288" selection-start-column="76" selection-end-line="288" selection-end-column="76" />
+        <state relative-caret-position="263">
+          <caret line="110" column="53" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="53" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/thanks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
         </state>
       </provider>
     </entry>
