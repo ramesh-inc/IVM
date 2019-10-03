@@ -333,11 +333,7 @@
                 <input type="text" class="form-control" placeholder="LinkedIn ID" name="linkedin_link" value={{linkedinx}}>
                 <div class="form-group">
                  <p>Name</P>
-                    <textarea name="full_name"  cols="30" rows="7" class="form-control" placeholder="Name" >
-                  {%for i in range(0, 1)%}
-							{{arname[0]}}
-							{%endfor%}
-                    </textarea>
+                    <textarea name="full_name"  cols="30" rows="7" class="form-control" placeholder="Name" >{%for i in range(0, 1)%}{{arname[0]}},{%endfor%}</textarea>
                  <div class="anonymity-slider-container">
                      <div class="slider-container">
                       <input class="slider" name="a_name" type="range" min="0" max="10" value="5"/>
@@ -354,11 +350,7 @@
               </div>
                 <p>Phone</P>
                  <div class="form-group">
-                <textarea name="phone_number"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, 1)%}
-							{{armobile[0]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="phone_number"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, 1)%}{{armobile[0]}},{%endfor%}</textarea>
                    <div class="anonymity-slider-container">
                      <div class="slider-container">
                       <input class="slider" name="a_phone" type="range" min="0" max="10" value="5"/>
@@ -375,11 +367,7 @@
               </div>
                  <div class="form-group">
                    <p>Address</p>
-                <textarea name="address"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, 1)%}
-							{{araddress[0]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="address"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, 1)%}{{araddress[0]}},{%endfor%}</textarea>
                    <div class="anonymity-slider-container">
                      <div class="slider-container">
                       <input class="slider" name="a_address" type="range" min="0" max="10" value="5"/>
@@ -396,11 +384,7 @@
               </div>
                  <div class="form-group">
                    <p>Email</p>
-                <textarea name="email"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, 1)%}
-							{{aremail[0]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="email"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, 1)%}{{aremail[0]}},{%endfor%}</textarea>
                 <div class="anonymity-slider-container">
                      <div class="slider-container">
                       <input class="slider" name="a_email" type="range" min="0" max="10" value="5"/>
@@ -417,16 +401,10 @@
               </div>
                  <div class="form-group">
                    <p>NIC</P>
-                <textarea name="nic"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, 1)%}
-							{{arnic[0]}}
-							{%endfor%}
-                </textarea>
-<<<<<<< HEAD
+                <textarea name="nic"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, 1)%}{{arnic[0]}},{%endfor%}</textarea>
+
                    <div class="anonymity-slider-container">
-=======
-                <div class="anonymity-slider-container">
->>>>>>> c934b30b994602bc4b852bfaa24ad90e57e92bb1
+
                      <div class="slider-container">
                       <input class="slider" name="a_nic" type="range" min="0" max="10" value="5"/>
                       <div class="count">5</div>
@@ -442,61 +420,31 @@
               </div>
                  <div class="form-group">
                    <p>University</P>
-                <textarea name="university" id="" cols="30" rows="7" class="form-control" placeholder="Message">
-                    {%for i in range(0, lenuniversity)%}
-							{{aruniversity[i]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="university" id="" cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lenuniversity)%}{{aruniversity[i]}},{%endfor%}</textarea>
               </div>
                  <div class="form-group">
                    <p>Degree</P>
-                <textarea name="degree"  cols="30" rows="7" class="form-control" placeholder="Message">
-                     {%for i in range(0, lendegree)%}
-							{{ardegree[i]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="degree"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lendegree)%}{{ardegree[i]}},{%endfor%}</textarea>
               </div>
                  <div class="form-group">
                    <p>Specialization</P>
-                <textarea name="specialization"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lendegree)%}
-							{{ardegree[i]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="specialization"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lendegree)%}{{ardegree[i]}},{%endfor%}</textarea>
               </div>
                 <div class="form-group">
                    <p>School</P>
-                <textarea name="school" cols="30" rows="7" class="form-control" placeholder="Message">
-                    {%for i in range(0, lenschool)%}
-							{{arschool[i]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="school" cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lenschool)%}{{arschool[i]}},{%endfor%}</textarea>
               </div>
                  <div class="form-group">
                    <p>Skills</P>
-                <textarea name="skills"  cols="30" rows="7" class="form-control" placeholder="Message">
-                     {%for i in range(0, lenskills)%}
-                            for x in i
-							    {{arskills[x]}}
-							{%endfor%}
-                    {%endfor%}
-                </textarea>
+                <textarea name="skills"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lenskills)%}{{arskills[i]}},{%endfor%}</textarea>
               </div>
                  <div class="form-group">
                    <p>Experience</P>
-                <textarea name="experience"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lenexperience)%}
-							{{arexperience[i]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="experience"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lenexperience)%}{{arexperience[i]}},{%endfor%}</textarea>
               </div>
                  <div class="form-group">
                    <p>Projects</P>
-                <textarea name="projects"  cols="30" rows="7" class="form-control" placeholder="Message">
-                  {%for i in range(0, lenproject)%}
-							{{arproject[i]}}
-							{%endfor%}
-                </textarea>
+                <textarea name="projects"  cols="30" rows="7" class="form-control" placeholder="Message">{%for i in range(0, lenproject)%}{{arproject[i]}},{%endfor%}</textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Continue" class="btn btn-primary py-3 px-5">

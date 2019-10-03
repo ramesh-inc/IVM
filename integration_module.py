@@ -633,15 +633,12 @@ def extracted(filename):
             mycursor.execute(sql_cv_q_predict, val_cv_q_predict)
             mydb.commit()
 
-<<<<<<< HEAD
             #rename resume name
             if file_path.lower().endswith('.docx'):
                 os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)),(os.path.join(app.config['UPLOAD_FOLDER'],( str(ivmid) + "_" + "resume.docx" ))))
             elif file_path.lower().endswith('.pdf'):
                 os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)), (os.path.join(app.config['UPLOAD_FOLDER'], (str(ivmid) + "_" + "resume.pdf"))))
-=======
-            os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)),(os.path.join(app.config['UPLOAD_FOLDER'], ivmid)))
->>>>>>> c934b30b994602bc4b852bfaa24ad90e57e92bb1
+
 
             return redirect(
                 url_for('linkedinextract', id=ivmid, url11=url1, aname=anonimized_name, aemail=anonimized_email, aaddress=anonimized_address,
