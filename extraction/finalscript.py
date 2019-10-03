@@ -139,8 +139,8 @@ def extracted(filename):
             name = []
             for line_index, line in enumerate(txt):
                 # print('Line #' + str(line_index) + ': ', line)
-                # if extract_name(line) is not None:
-                #     name1.append(line)
+                if extract_name(line) is not None:
+                     name1.append(line)
 
                 if extract_address(line) is not None:
                     address.append(line)
@@ -672,27 +672,27 @@ def build_resume_list():
         # vMatcher.VacancyMatching().matchingByVacencyId(vacancyId)
 
         print(vacancyId)
-        matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(vacancyId)
-
-
-        # Build Suggestion Result
-        candidates = list()
-        # anonimityList = list()
-
-        for row in matchingDetails:
-            user = userClass.user().selectUser(row[1])
-            print(row[1])
-            # anonimityValues = anonimity.anonimity().selectByUserID(row[1])
-            candidates.append(user)
-            # print(anonimityValues)
-            # anonimityList.append(anonimityValues)
-
-        print(candidates)
+        # matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(vacancyId)
+        #
+        #
+        # # Build Suggestion Result
+        # candidates = list()
+        # # anonimityList = list()
+        #
+        # for row in matchingDetails:
+        #     user = userClass.user().selectUser(row[1])
+        #     print(row[1])
+        #     # anonimityValues = anonimity.anonimity().selectByUserID(row[1])
+        #     candidates.append(user)
+        #     # print(anonimityValues)
+        #     # anonimityList.append(anonimityValues)
+        #
+        # print(candidates)
         # print(anonimityList)
 
     else:
         return render_template('suggetion_resume.html')
-    return render_template('suggetion_resume.html', candidates=candidates)
+    # return render_template('suggetion_resume.html', candidates=candidates)
 
 if __name__ == '__main__':
     app.run(debug=True)
