@@ -35,4 +35,4 @@ class VacancyMatching:
 
 if __name__ == "__main__":
     vm = VacancyMatching()
-    vm.matchingByVacencyId(24)
+    vm.matchingByVacencyId(23)

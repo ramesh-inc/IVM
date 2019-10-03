@@ -247,7 +247,7 @@ def build_resume_list():
         vacancyId = request.form['vacancy_id']
         # vMatcher.VacancyMatching().matchingByVacencyId(vacancyId)
 
-        print(vacancyId)
+        print("Vacancy Id: " + vacancyId)
         matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(vacancyId)
 
 
