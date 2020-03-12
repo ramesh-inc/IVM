@@ -263,7 +263,7 @@ def upload_vacancy():
         vacancyId = vacancies.sq_vacancies().insertVacancy(companyId, job_title, edu_qualification, exp_technologies, exp_yrs, required_skills, other_skills)
         vMatcher.VacancyMatching().matchingByVacencyId(vacancyId)
 
-        print(companyId)
+        print("Vac ID:" + str(vacancyId))
         matchingDetails = vm.sq_vacancy_matching().selectByVacancyID(vacancyId)
 
 
@@ -634,10 +634,10 @@ def extracted(filename):
             mydb.commit()
 
             #rename resume name
-            if file_path.lower().endswith('.docx'):
-                os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)),(os.path.join(app.config['UPLOAD_FOLDER'],( str(ivmid) + "_" + "resume.docx" ))))
-            elif file_path.lower().endswith('.pdf'):
-                os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)), (os.path.join(app.config['UPLOAD_FOLDER'], (str(ivmid) + "_" + "resume.pdf"))))
+            # if file_path.lower().endswith('.docx'):
+            #     os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)),(os.path.join(app.config['UPLOAD_FOLDER'],( str(ivmid) + "_" + "resume.docx" ))))
+            # elif file_path.lower().endswith('.pdf'):
+            #     os.rename((os.path.join(app.config['UPLOAD_FOLDER'], filename)), (os.path.join(app.config['UPLOAD_FOLDER'], (str(ivmid) + "_" + "resume.pdf"))))
 
 
             return redirect(
@@ -712,7 +712,7 @@ def clogin():
                 userid = (account[0])
 
                 Predictor.Prediction().makePredictionNb()
-                vacancy_matching = vm.sq_vacancy_matching().selectByResumeID(userid)
+                vacancy_matching = vm.sq_vacancy_matching().selectByResumeID(int(userid))
 
                 # Build Suggestion Result
                 matching_vacancyList = list()

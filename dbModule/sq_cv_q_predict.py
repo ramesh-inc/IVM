@@ -10,7 +10,7 @@ class cv_q_predict:
         self.cursor = self.db.cursor()
 
     def getDataForNbPrediction(self):
-        sql = "SELECT id, userid, age, skills, experience_yrs, university, degree, specialization FROM cv_q_predict WHERE nbstatus=0"
+        sql = "SELECT id, userid, age, skills, experience_yrs, university, degree, specialization FROM cv_q_predict WHERE nbstatus=1"
         try:
             self.cursor.execute(sql)
             results = self.cursor.fetchall()
@@ -31,7 +31,7 @@ class cv_q_predict:
 
 
     def getDataForDtPrediction(self, id):
-        sql = "SELECT id, userid, age, skills, experience_yrs, university, degree, specialization FROM cv_q_predict WHERE dtstatus=0 AND id=%s"
+        sql = "SELECT id, userid, age, skills, experience_yrs, university, degree, specialization FROM cv_q_predict WHERE dtstatus=1 AND id=%s"
         try:
             self.cursor.execute(sql, id)
             results = self.cursor.fetchall()

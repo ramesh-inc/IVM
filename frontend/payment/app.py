@@ -30,7 +30,6 @@ def pay():
         description='The Resume'
     )
 
-
     return redirect(url_for('thanks'))
 
 if __name__ == '__main__':
